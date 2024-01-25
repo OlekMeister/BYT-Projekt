@@ -38,7 +38,7 @@ Mechanic Mate to aplikacja do zarządzania warsztatem samochodowym, która umoż
 3. Uruchom aplikację: `python app.py`
 
 ## Testy Jednostkowe
-- Do uruchomienia testów jednostkowych użyj polecenia: `python tests.py`
+- Do uruchomienia testów jednostkowych użyj polecenia: `python test_app.py`
 
 ---
 
