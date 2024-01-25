@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+
+{% block style %}
+    .more a{
+        color: aliceblue;
+        font-size: 12px;
+    }
+    td{
+        color: aliceblue;
+    }
+    th{
+        color: aliceblue;
+    }
+{% endblock %}
+
+{% block content %}
+    <h1>Service History</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>History ID</th>
+                <th>Description</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in history_entries %}
+                <tr>
+                    <td>{{ entry.id }}</td>
+                    <td>{{ entry.description }}</td>
+                    <td>{{ entry.timestamp }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
