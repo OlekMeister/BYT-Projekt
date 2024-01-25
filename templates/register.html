@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Zarejestruj się</h1>
+        <form method="POST" action="{{ url_for('register') }}">
+            {{ form.csrf_token }}
+            <div class="form-group">
+                <label for="name">Imię i nazwisko:</label>
+                {{ form.name(class="form-control") }}
+            </div>
+            <div class="form-group">
+                <label for="contact_info">Informacje kontaktowe:</label>
+                {{ form.contact_info(class="form-control") }}
+            </div>
+            {{ form.submit(class="btn btn-danger") }}
+        </form>
+    </div>
+{% endblock %}
