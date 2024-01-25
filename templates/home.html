@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Witaj w Warsztacie Samochodowym</h1>
+        <p>Tutaj zarządzasz usługami samochodowymi.</p>
+        <div class="d-flex">
+            <a href="{{ url_for('login') }}" class="btn btn-danger mr-2">Zaloguj się</a>
+            <a href="{{ url_for('register') }}" class="btn btn-secondary">Zarejestruj się</a>
+        </div>
+    </div>
+{% endblock %}
