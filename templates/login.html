@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Zaloguj się</h1>
+        <form method="POST" action="{{ url_for('login') }}">
+            {{ form.csrf_token }}
+            <div class="form-group">
+                <label for="name">Imię i nazwisko:</label>
+                {{ form.name(class="form-control") }}
+            </div>
+            {{ form.submit(class="btn btn-danger") }}
+        </form>
+    </div>
+{% endblock %}
